@@ -16,13 +16,13 @@ public class SliderController : MonoBehaviour
     public GameObject Cube;
     //public Slider HpSlider1 { get => HpSlider; set => HpSlider = value; }
 
-    private void Awake()
+    public void Awake()
     {
         CubeArray(10);
     }
 
 
-    void Update()
+    public void Update()
     {
         #region 血量 If 判斷式
         if (Hp <= 30)
@@ -39,7 +39,7 @@ public class SliderController : MonoBehaviour
         }
         #endregion 血量 If 判斷式 結束
 
-        drinkSomething.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "你吃錯藥了!!";
+        drinkSomething.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
 
         
     }

@@ -769,10 +769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c81341d4172574aa0583eee0f68396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  propDrink: "\u7D05\u6C34"
   hint: {fileID: 235224393}
   drinkSomething: {fileID: 235224393}
-  propDrink: "\u7D05\u6C34"
-  HpSlider: {fileID: 0}
+  HpSlider: {fileID: 98825983}
   Cube: {fileID: 2044009253}
 --- !u!1 &705507993
 GameObject:
