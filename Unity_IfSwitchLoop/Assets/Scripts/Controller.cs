@@ -28,8 +28,27 @@ public class Controller : MonoBehaviour
         CubeArray(10);
     }
 
-   private void Update()
+    private void Update()
     {
+        HpValue();
+
+        drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
+    }
+
+    #region 文字輸入
+
+    public void InputString(string something)
+    {
+        propDrink = something;
+    }
+    #endregion 文字輸入 結束
+
+
+    #region 血量 If 判斷式
+
+    public void HpValue()
+    {
+         Hp = (int)HpSlider.value ;  //強制型別轉換
         if (Hp <= 30)
         {
             hint.text = "危險!!";
@@ -43,28 +62,8 @@ public class Controller : MonoBehaviour
             hint.text = "安全~";
         }
 
-
-        drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
     }
-
-
-    #region 文字輸入
-
-    public void InputString(string something)
-    {
-        propDrink = something;
-    }
-    #endregion 文字輸入 結束
-
-
-    /*#region 血量 If 判斷式
-
-    public void HpValue()
-    {
-       
-
-    }
-    #endregion 血量 If 判斷式 結束*/
+    #endregion 血量 If 判斷式 結束
 
 
     #region 設定方塊陣列
