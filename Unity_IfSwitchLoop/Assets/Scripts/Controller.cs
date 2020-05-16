@@ -7,8 +7,7 @@ public class Controller : MonoBehaviour
 {
     /// <summary>
     /// 血量設定
-    /// </summary>
-    [Range(1, 100)]
+    /// </summary
     private int _Hp;
 
     public Slider HpSlider; // 血條拉霸
