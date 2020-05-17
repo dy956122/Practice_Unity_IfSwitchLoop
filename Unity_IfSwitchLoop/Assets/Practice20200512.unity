@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 235224394}
   - component: {fileID: 235224393}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 510367922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 1baf2d951ff900345adc27ac6377dd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -687,6 +687,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnValueChanged:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598594668}
         m_MethodName: InputString
@@ -699,9 +702,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -709,6 +709,10 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_DialogTitle: Input Text
+  m_DialogOkBtn: OK
+  m_DialogCancelBtn: Cancel
+  m_DialogType: 1
 --- !u!114 &510367925
 MonoBehaviour:
   m_ObjectHideFlags: 0

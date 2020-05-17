@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Controller
+    - WebGLNativeInputField
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -14,7 +15,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
@@ -56,13 +56,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 12296}
-    - Class: 114
       Script: {instanceID: 12584}
     - Class: 114
       Script: {instanceID: 12932}
     - Class: 114
       Script: {instanceID: 12962}
+    - Class: 114
+      Script: {instanceID: 14008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -512,6 +512,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a66536577d0b6f9e5f7f8c9f8b8d791e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WebGLNativeInputField
   platform: 20
   scenePathNames:
   - Assets/Practice20200512.unity

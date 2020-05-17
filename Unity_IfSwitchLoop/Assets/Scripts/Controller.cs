@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class Controller : MonoBehaviour // 總區塊
 {
+    #region 設定基礎數值與欄位
     /// <summary>
     /// 血量設定
     /// </summary
     private int _Hp;
+    public int Hp { get => _Hp; set => _Hp = value; }
 
     public Slider HpSlider; // 血條拉霸
 
@@ -19,8 +21,8 @@ public class Controller : MonoBehaviour
     public Text drinkthing; // 文字藥水輸出
 
     public GameObject Cube; //陣列用物件
+    #endregion 設定基礎數值與欄位 結束
 
-    public int Hp { get => _Hp; set => _Hp = value; }
 
     private void Awake()
     {
@@ -34,20 +36,17 @@ public class Controller : MonoBehaviour
         drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
     }
 
-    #region 文字輸入
 
-    public void InputString(string something)
+
+    public void InputString(string something) // 文字輸入
     {
         propDrink = something;
-    }
-    #endregion 文字輸入 結束
+    } // 文字輸入 結束
+ 
 
-
-    #region 血量 If 判斷式
-
-    public void HpValue()
+    public void HpValue() // 血量 If 判斷式
     {
-         Hp = (int)HpSlider.value ;  //強制型別轉換
+        Hp = (int)HpSlider.value ;  //強制型別轉換
         if (Hp <= 30)
         {
             hint.text = "危險!!";
@@ -61,12 +60,10 @@ public class Controller : MonoBehaviour
             hint.text = "安全~";
         }
 
-    }
-    #endregion 血量 If 判斷式 結束
+    } // 血量 If 判斷式 結束
 
 
-    #region 設定方塊陣列
-    public void CubeArray(int length)
+    public void CubeArray(int length) //設定方塊陣列
     {
         for (int i = 0; i <= length; i++)
         {
@@ -75,7 +72,5 @@ public class Controller : MonoBehaviour
                 Instantiate(Cube, new Vector3(i, k, 0), Quaternion.Euler(270, 0, 0));
             }
         }
-    }
-    #endregion 設定方塊陣列 結束
-
-}
+    } // 設定方塊陣列 結束
+} // 總區塊 結束
